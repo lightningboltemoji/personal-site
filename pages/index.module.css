@@ -2,8 +2,7 @@
   padding: 0 2rem;
 }
 
-.main {
-  min-height: 100vh;
+.flexWrapper {
   padding: 2rem 0;
   flex: 1;
   display: flex;
@@ -37,6 +36,7 @@
 
 .linkRow {
   display: flex;
+  justify-content: center;
   margin-top: 16px;
 }
 
@@ -44,4 +44,9 @@
   margin: 0px 2px;
   width: 36px;
   height: 36px;
+}
+
+.pAlignCenter {
+  max-width: 800px;
+  text-align: center;
 }

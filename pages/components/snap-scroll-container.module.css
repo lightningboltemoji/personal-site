@@ -1,0 +1,12 @@
+.container {
+  overflow-y: scroll;
+  max-height: 100vh;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.container::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
