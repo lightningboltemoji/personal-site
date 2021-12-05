@@ -14,6 +14,10 @@ const Index: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
+        <video className={styles.video} autoPlay loop muted playsInline controls={false}>
+          <source src="memoji.mp4" type="video/mp4" />
+          There should be a memoji here, but it looks like your browser doesn&apos;t support it!
+        </video>
         <h1 className={styles.title}>
           Tanner Cecchetti
         </h1>
