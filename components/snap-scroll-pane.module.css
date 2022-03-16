@@ -1,5 +1,4 @@
 .container {
   scroll-snap-align: start;
   min-height: 100vh;
-  max-height: 100vh;
 }

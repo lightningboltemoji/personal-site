@@ -50,3 +50,16 @@
   max-width: 800px;
   text-align: center;
 }
+
+.lists {
+  margin-top: 16px;
+}
+
+.brandContainer {
+  margin-top: 10px;
+}
+
+.brandContainer > h2 {
+  margin-top: 20px;
+  margin-bottom: 8px;
+}

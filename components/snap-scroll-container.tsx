@@ -5,12 +5,14 @@ type Props = {
   children: any;
 };
 
-const SnapScrollContainer = ({ className, children }: Props) => {
+const SnapScrollContainer = (p: Props) => {
   return (
     <div
-      className={`${styles.container}${(className && ` ${className}`) || ''}`}
+      className={`${styles.container}${
+        (p.className && ` ${p.className}`) || ''
+      }`}
     >
-      {children}
+      {p.children}
     </div>
   );
 };
