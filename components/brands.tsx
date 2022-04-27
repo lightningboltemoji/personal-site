@@ -27,13 +27,13 @@ const Container = (p: ContainerProps) => (
 );
 
 export const Java = () => (
-  <Container>
+  <Container style={{ backgroundColor: '#f9e7e7' }}>
     <img src="./logo/java.svg" />
   </Container>
 );
 
 export const Python = () => (
-  <Container>
+  <Container style={{ backgroundColor: '#aac0af' }}>
     <img src="./logo/python.svg" />
   </Container>
 );
@@ -45,7 +45,7 @@ export const AWS = () => (
 );
 
 export const GCP = () => (
-  <Container>
+  <Container style={{ backgroundColor: '#9bc1bc' }}>
     <img src="./logo/gcp.svg" />
   </Container>
 );
@@ -77,5 +77,11 @@ export const JavaScript = () => (
 export const TypeScript = () => (
   <Container padded={false}>
     <img src="./logo/typescript.svg" />
+  </Container>
+);
+
+export const Docker = () => (
+  <Container padded={false} style={{ backgroundColor: '#f39237' }}>
+    <img src="./logo/docker.svg" />
   </Container>
 );

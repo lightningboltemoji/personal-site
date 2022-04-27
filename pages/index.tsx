@@ -6,6 +6,7 @@ import { FunctionComponent } from 'react';
 import {
   AWS,
   BrandRow,
+  Docker,
   GCP,
   Go,
   Java,
@@ -57,7 +58,7 @@ const Skills: FunctionComponent = () => (
     <div className={styles.brandContainer}>
       <h2 className={styles.subtitle}>Most familiar with</h2>
       <BrandRow>
-        <Python /> <Java /> <AWS /> <GCP />
+        <Python /> <Java /> <AWS /> <GCP /> <Docker />
       </BrandRow>
       <h2 className={styles.subtitle}>Still learning</h2>
       <BrandRow>
