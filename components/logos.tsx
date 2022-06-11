@@ -1,11 +1,11 @@
 import classnames from 'classnames';
-import styles from './brands.module.css';
+import styles from './logos.module.css';
 
-type BrandRowProps = {
+type LogoRowProps = {
   children: any;
 };
 
-export const BrandRow = (p: BrandRowProps) => (
+export const LogoRow = (p: LogoRowProps) => (
   <div className={styles.row}>{p.children}</div>
 );
 
@@ -27,13 +27,13 @@ const Container = (p: ContainerProps) => (
 );
 
 export const Java = () => (
-  <Container style={{ backgroundColor: '#f9e7e7' }}>
+  <Container style={{ backgroundColor: '#ffebe0' }}>
     <img src="./logo/java.svg" />
   </Container>
 );
 
 export const Python = () => (
-  <Container style={{ backgroundColor: '#aac0af' }}>
+  <Container style={{ backgroundColor: '#def8e4' }}>
     <img src="./logo/python.svg" />
   </Container>
 );
@@ -45,7 +45,7 @@ export const AWS = () => (
 );
 
 export const GCP = () => (
-  <Container style={{ backgroundColor: '#9bc1bc' }}>
+  <Container style={{ backgroundColor: '#ececec' }}>
     <img src="./logo/gcp.svg" />
   </Container>
 );

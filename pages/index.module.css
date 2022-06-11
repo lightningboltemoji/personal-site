@@ -34,6 +34,15 @@
   font-size: 1.5rem;
 }
 
+@media screen and (max-width: 800px) {
+  .title {
+    font-size: 2rem;
+  }
+  .subtitle {
+    font-size: 1.2rem;
+  }
+}
+
 .linkRow {
   display: flex;
   justify-content: center;
@@ -62,4 +71,37 @@
 .brandContainer > h2 {
   margin-top: 20px;
   margin-bottom: 8px;
+}
+
+.circle1 {
+  position: absolute;
+  left: calc(50vw + 120px - max(min(50vw, 50vh), 35vh));
+  top: calc(50vh + 20px - max(min(50vw, 50vh), 35vh));
+  width:  max(min(50vw, 50vh), 35vh);
+  height:  max(min(50vw, 50vh), 35vh);
+  border-radius: 50%;
+  background-color: #839791;
+  z-index: -1001;
+}
+
+.circle2 {
+  position: absolute;
+  left: calc(50vw - 30px);
+  top: calc(50vh + 40px - max(min(40vw, 40vh), 25vh));
+  width: max(min(40vw, 40vh), 25vh);
+  height: max(min(40vw, 40vh), 25vh);
+  border-radius: 50%;
+  background-color: #AAC0AF;
+  z-index: -998;
+}
+
+.circle3 {
+  position: absolute;
+  left: calc(50vw + 50px - max(min(30vw, 30vh), 20vh));
+  top: calc(50vh + 130px - max(min(30vw, 30vh), 20vh));
+  width: max(min(30vw, 30vh), 20vh);
+  height: max(min(30vw, 30vh), 20vh);
+  border-radius: 50%;
+  background-color: #EFD5C3;
+  z-index: -999;
 }

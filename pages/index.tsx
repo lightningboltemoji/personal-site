@@ -1,27 +1,30 @@
 import { faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faSquareEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { motion } from 'framer-motion';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { FunctionComponent } from 'react';
 import {
   AWS,
-  BrandRow,
   Docker,
   GCP,
   Go,
   Java,
   JavaScript,
   Kubernetes,
+  LogoRow,
   Python,
   Rust,
   TypeScript,
-} from '~/components/brands';
-import SnapScrollContainer from '~/components/snap-scroll-container';
-import SnapScrollPane from '~/components/snap-scroll-pane';
+} from '~/components/logos';
+import { SnapScrollContainer, SnapScrollPane } from '~/components/snap-scroll';
 import styles from './index.module.css';
 
 const BasicInfo: FunctionComponent = () => (
   <SnapScrollPane className={styles.flexWrapper}>
+    <Circles />
+
     <video
       className={styles.video}
       autoPlay
@@ -44,8 +47,43 @@ const BasicInfo: FunctionComponent = () => (
       <a target="_" href="https://github.com/lightningboltemoji">
         <FontAwesomeIcon icon={faGithubSquare} />
       </a>
+      <a target="_" href="mailto:tanner@cecchetti.xyz">
+        <FontAwesomeIcon icon={faSquareEnvelope} />
+      </a>
     </div>
   </SnapScrollPane>
+);
+
+const Circles: FunctionComponent = () => (
+  <motion.div initial="offscreen" whileInView="onscreen" exit="offscreen">
+    <motion.div
+      className={styles.circle1}
+      variants={{
+        offscreen: {
+          x: '-55vw',
+        },
+        onscreen: { x: 0 },
+      }}
+    />
+    <motion.div
+      className={styles.circle2}
+      variants={{
+        offscreen: {
+          x: '55vw',
+        },
+        onscreen: { x: 0 },
+      }}
+    />
+    <motion.div
+      className={styles.circle3}
+      variants={{
+        offscreen: {
+          x: '55vw',
+        },
+        onscreen: { x: 0 },
+      }}
+    />
+  </motion.div>
 );
 
 const Skills: FunctionComponent = () => (
@@ -57,22 +95,17 @@ const Skills: FunctionComponent = () => (
     </p>
     <div className={styles.brandContainer}>
       <h2 className={styles.subtitle}>Most familiar with</h2>
-      <BrandRow>
+      <LogoRow>
         <Python /> <Java /> <AWS /> <GCP /> <Docker />
-      </BrandRow>
+      </LogoRow>
       <h2 className={styles.subtitle}>Still learning</h2>
-      <BrandRow>
-        <Go /> <Rust /> <Kubernetes /> <JavaScript /> <TypeScript />
-      </BrandRow>
+      <LogoRow>
+        <Go /> <JavaScript /> <TypeScript />
+        <Rust /> <Kubernetes />
+      </LogoRow>
     </div>
   </SnapScrollPane>
 );
-
-// const Interests: FunctionComponent = () => (
-//   <SnapScrollPane className={styles.flexWrapper}>
-
-//   </SnapScrollPane>
-// );
 
 const Index: NextPage = () => {
   return (
@@ -94,7 +127,6 @@ const Index: NextPage = () => {
         <SnapScrollContainer>
           <BasicInfo />
           <Skills />
-          {/* <Interests /> */}
         </SnapScrollContainer>
       </main>
     </div>
