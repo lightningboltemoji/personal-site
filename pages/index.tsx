@@ -1,10 +1,10 @@
 import { faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faSquareEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { motion } from 'framer-motion';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { FunctionComponent } from 'react';
+import { Circles } from '~/components/circles';
 import {
   AWS,
   Docker,
@@ -54,38 +54,6 @@ const BasicInfo: FunctionComponent = () => (
   </SnapScrollPane>
 );
 
-const Circles: FunctionComponent = () => (
-  <motion.div initial="offscreen" whileInView="onscreen" exit="offscreen">
-    <motion.div
-      className={styles.circle1}
-      variants={{
-        offscreen: {
-          x: '-55vw',
-        },
-        onscreen: { x: 0 },
-      }}
-    />
-    <motion.div
-      className={styles.circle2}
-      variants={{
-        offscreen: {
-          x: '55vw',
-        },
-        onscreen: { x: 0 },
-      }}
-    />
-    <motion.div
-      className={styles.circle3}
-      variants={{
-        offscreen: {
-          x: '55vw',
-        },
-        onscreen: { x: 0 },
-      }}
-    />
-  </motion.div>
-);
-
 const Skills: FunctionComponent = () => (
   <SnapScrollPane className={styles.flexWrapper}>
     <h1 className={styles.title}>Hello, there!</h1>
@@ -121,6 +89,7 @@ const Index: NextPage = () => {
             sizes={size}
           />
         ))}
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 
       <main className={styles.main}>
