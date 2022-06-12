@@ -1,11 +1,13 @@
 .container {
   overflow-y: scroll;
   max-height: 100vh;
+
   scroll-snap-type: y mandatory;
   scrollbar-width: none;
   -ms-overflow-style: none;
   -webkit-overflow-scrolling: touch;
 }
+
 
 .container::-webkit-scrollbar {
   width: 0;
@@ -15,4 +17,17 @@
 .pane {
   scroll-snap-align: start;
   min-height: 100vh;
+}
+
+/* 
+ * Represents 100vh on iOS when address bar is visible (always, in this case)
+ * https://github.com/postcss/postcss-100vh-fix
+*/
+@supports (-webkit-touch-callout: none) {
+  .container  {
+    max-height: -webkit-fill-available;
+  }
+  .pane {
+    min-height: -webkit-fill-available;
+  }
 }
