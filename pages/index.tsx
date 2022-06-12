@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { FunctionComponent } from 'react';
-import { Circles } from '~/components/circles';
 import {
   AWS,
   Docker,
@@ -23,8 +22,6 @@ import styles from './index.module.css';
 
 const BasicInfo: FunctionComponent = () => (
   <SnapScrollPane className={styles.flexWrapper}>
-    <Circles />
-
     <video
       className={styles.video}
       autoPlay
@@ -80,6 +77,7 @@ const Index: NextPage = () => {
     <div className={styles.container}>
       <Head>
         <title>cecchetti.xyz | Tanner Cecchetti</title>
+        <meta name="viewport" content="initial-scale=1, width=device-width" />
         {['16x16', '32x32', '96x96'].map((size) => (
           <link
             key={size}
