@@ -6,9 +6,12 @@ type Props = {
   children: any;
 };
 
-const Base = (clz: string) => (p: Props) => {
-  return <div className={classNames(clz, p.className)}>{p.children}</div>;
-};
+function Base(clz: string) {
+  return function Base(p: Props) {
+    return <div className={classNames(clz, p.className)}>{p.children}</div>;
+  };
+}
+
 const Container = Base(styles.container);
 const Pane = Base(styles.pane);
 
